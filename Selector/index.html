@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Crash Course</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+        body{
+            font-size:17px;
+            font-family:Arial;
+            background: #f4f4f4;
+            line-height:1.5em;
+        }
+        header{
+            background: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>    
+        <h1>jQuery Crash Course</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">heading One</h1>
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque dolorem iure, illo dolore a ad, <span>voluptatem nihil repudiandae esse minus ipsam possimus!</span> Voluptas esse tempora perferendis pariatur voluptatibus eligendi!</p>
+
+        <h1 class="heading2">heading One</h1>
+        <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat atque dolorem iure, illo dolore a ad, <span>voluptatem nihil repudiandae esse minus ipsam possimus!</span> Voluptas esse tempora perferendis pariatur voluptatibus eligendi!</p>
+        <ul id="list">
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+        <input type="button" value="button 1">
+        <input type="submit" value="submit">
+        <input type="text">
+        <a href="http://google.com">Google</a>
+        <a href="http://yahoo.com">Yahoo</a>
+
+    </div>
+    <script>
+        // $('h1').hide(); // Hides all h1
+        // $('h1#heading1').hide();// hides all h1 with id name
+        // $('h1.heading2').hide();// Hides all h1 with class name
+        // $('p span').css('color', 'red');// Change the color of span in paragraph
+        
+        $('ul#list li:first').css('color', 'red');// Change the color of first list item.
+        $('ul#list li:last').css('color', 'red');// Change the color of the last list item.
+        $('ul#list li:even').css('background-color', 'yellow');// Change the color of the even number list item.
+        $('ul#list li:nth-child(3n)').css('list-style', 'none');// Change the color of third list item.
+        // $(':button').hide();// Hide the button type button
+        // $(':submit').hide();// Hide the button type submit
+        // $(':text').hide();// Hide the button type text
+        $('input').css('color','blue');// Change the font color of the input,
+        $('[href]').css('color','red');// Change the colore of the link
+        $('a[href="http://yahoo.com"]').css('color','green');// Change the color of the link with herf yahoo.com
+        // $('*').hide(); // hide everything
+    </script>
+</body>
+</html>
